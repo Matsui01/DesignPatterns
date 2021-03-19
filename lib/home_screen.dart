@@ -1,6 +1,7 @@
 import 'package:designpatterns/constants/my_colors.dart';
 import 'package:designpatterns/factory/factory_screen.dart';
 import 'package:designpatterns/my_button.dart';
+import 'package:designpatterns/my_navigation.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,11 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               size: 20,
             ),
             function: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => FactoryScreen(),
-                ),
-              );
+              MyNavigation.push(context, FactoryScreen());
             },
           )
         ],
