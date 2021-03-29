@@ -30,33 +30,10 @@ abstract class MyDialog {
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  // content,
+                  create(context),
                 ],
               ),
             ),
-            // Column(
-            //   children: <Widget>[
-            //     Expanded(
-            //       flex: 4,
-            //       child: Container(),
-            //     ),
-            //     Expanded(
-            //       flex: 77,
-            //       child: Dialog(
-            //         shape: RoundedRectangleBorder(
-            //           borderRadius: BorderRadius.circular(10.0),
-            //         ),
-            //         backgroundColor: Color.fromARGB(50, 255, 255, 255),
-            //         elevation: 0,
-            //         child: content,
-            //       ),
-            //     ),
-            //     Expanded(
-            //       flex: 19,
-            //       child: Container(),
-            //     ),
-            //   ],
-            // ),
           ),
         );
       },

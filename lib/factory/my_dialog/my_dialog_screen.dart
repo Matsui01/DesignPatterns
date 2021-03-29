@@ -1,4 +1,6 @@
 import 'package:designpatterns/constants/my_colors.dart';
+import 'package:designpatterns/factory/my_dialog/my_alert_dialog.dart';
+import 'package:designpatterns/factory/my_dialog/my_flat_dialog.dart';
 import 'package:designpatterns/main.dart';
 import 'package:designpatterns/my_app_bar.dart';
 import 'package:designpatterns/my_button.dart';
@@ -14,7 +16,7 @@ class _MyDialogScreenState extends State<MyDialogScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 50, 50, 50),
-      appBar: MyAppBar(title: "Dialog",),
+      appBar: MyAppBar(title: "Dialog"),
       body: Center(
         child: MyButton(
           title: "Show Flat dialog",
@@ -24,8 +26,11 @@ class _MyDialogScreenState extends State<MyDialogScreen> {
             color: MyColors.secondary,
             size: 20,
           ),
-          function: () {
-            
+          function: () async{
+            MyAlertDialog alertDialog = MyAlertDialog();
+            MyFlatDialog flatDialog = MyFlatDialog();
+            await alertDialog.show(context);
+            await flatDialog.show(context);
           },
         ),
       ),

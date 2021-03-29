@@ -1,6 +1,5 @@
 import 'package:designpatterns/constants/my_colors.dart';
 import 'package:designpatterns/factory/factory_button/factory_button_screen.dart';
-import 'package:designpatterns/factory/factory_dialog/factory_screen.dart';
 import 'package:designpatterns/factory/factory_example.dart';
 import 'package:designpatterns/factory/factory_simple_example.dart';
 import 'package:designpatterns/factory/my_dialog/my_dialog_screen.dart';
